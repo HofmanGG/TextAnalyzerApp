@@ -11,6 +11,8 @@ namespace BusinessLogic.Services
     и юзер сам ставил галочки какие метрики ему нужны, и если так то можно просто скопипастить GetMetrixOfText и просто передавать туда
     bool для каждой метрики. Но возможно не это имелось ввиду в задании поэтому я сделал просто так. Ещё добавлю, что у меня
     есть проект на Github https://github.com/HofmanGG/RepairService сайт ремонта техники, можете также посмотреть и его.*/
+    /*и ещё, само собой я мог написать бомбезные юнит тесты xUnit/NUnit + Moq + AutoFixture + FluentAsssetions, сделать лучше фронт,
+    сделать больше метрик, но сколько надо делать метрик и их сложность в задании не указано, поэтому я просто сделал то, что от меня хотели в задании*/
     public class TextAnalyzerService: ITextAnalyzerService
     {
         private char[] charsToNotInclude = { ' ' };
@@ -27,9 +29,10 @@ namespace BusinessLogic.Services
             return metrics;
         }
 
+        //возможно в будущем метрики будут вызываться по отдельности, поэтому я сделал их public
         //return only one most popular char
         //chars that are upper case and lower case are different
-        private string GetTheMostPopularChar(string textToAnalize)
+        public string GetTheMostPopularChar(string textToAnalize)
         {
             var mostPopularChar = textToAnalize
                 .Where(x => !charsToNotInclude.Contains(x))
@@ -42,7 +45,7 @@ namespace BusinessLogic.Services
         
         //return only one least popular char
         //chars that are upper case and lower case are different
-        private string GetTheLeastPopularChar(string textToAnalize)
+        public string GetTheLeastPopularChar(string textToAnalize)
         {
             var leastPopularChar = textToAnalize
                 .Where(x => !charsToNotInclude.Contains(x))
@@ -53,13 +56,13 @@ namespace BusinessLogic.Services
             return leastPopularChar.ToString();
         }
 
-        private int GetCountOfUpperCaseChars(string textToAnalyze)
+        public int GetCountOfUpperCaseChars(string textToAnalyze)
         {
             var count = textToAnalyze.Count(c => char.IsUpper(c));
             return count;
         }
 
-        private int GetCountOfSentences(string textToAnalyze)
+        public int GetCountOfSentences(string textToAnalyze)
         {
             var sentences = Regex.Split(textToAnalyze, @"(?<=[\.!\?])\s+");
             return sentences.Count();
