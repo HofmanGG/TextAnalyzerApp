@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AutoMapper;
 using TextAnalyzerApp.Infrastructure.MapperProfiles;
+using BusinessLogic.Interfaces;
 
 namespace TerrasoftApp
 {
@@ -25,7 +26,8 @@ namespace TerrasoftApp
 
             /*actually its better to write my custom dependencies in a separate file,
             but i think its overkill in this case*/
-            services.AddScoped<ITextAnalyzerService, TextAnalyzerService>();
+            services.AddScoped<IMetricsService, MetricsService>();
+            services.AddScoped<ITextService, TextService>();
 
             services.AddAutoMapper(typeof(MetricsModelProfile));
         }

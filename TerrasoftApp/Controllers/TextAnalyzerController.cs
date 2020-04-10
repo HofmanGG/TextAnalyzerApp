@@ -10,12 +10,12 @@ namespace TextAnalyzerApp.Controllers
     [Produces("application/json")]
     public class TextAnalyzerController : ControllerBase
     {
-        private readonly ITextAnalyzerService _textAnalyzerService;
+        private readonly IMetricsService _metricsService;
         private readonly IMapper _mapper;
 
-        public TextAnalyzerController(ITextAnalyzerService textAnalyzerService, IMapper mapper)
+        public TextAnalyzerController(IMetricsService metricsService, IMapper mapper)
         {
-            _textAnalyzerService = textAnalyzerService;
+            _metricsService = metricsService;
             _mapper = mapper;
         }
 
@@ -23,7 +23,7 @@ namespace TextAnalyzerApp.Controllers
         [HttpPost]
         public ActionResult<MetricsModel> GetMetrics(TextToAnalyzeModel textModel)
         {
-            var metricsDto = _textAnalyzerService.GetMetricsOfText(textModel.TextToAnalyze);
+            var metricsDto = _metricsService.GetAllMetricsOfText(textModel.TextToAnalyze);
             var metricsModel = _mapper.Map<MetricsModel>(metricsDto);
             return Ok(metricsModel);
         }
