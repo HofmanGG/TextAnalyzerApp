@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace BusinessLogic.Services
 {
+    //Service, that works with text. Works with cyrillic and latin
     public class TextService: ITextService
     {
         private char[] charsToNotInclude = { ' ' };

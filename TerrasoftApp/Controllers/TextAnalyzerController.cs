@@ -21,7 +21,7 @@ namespace TextAnalyzerApp.Controllers
 
         //because the input of the user can be long, we shouldnot use Get, so i use Post
         [HttpPost]
-        public ActionResult<MetricsModel> GetMetrics(TextToAnalyzeModel textModel)
+        public ActionResult<MetricsModel> GetAllMetrics(TextToAnalyzeModel textModel)
         {
             var metricsDto = _metricsService.GetAllMetricsOfText(textModel.TextToAnalyze);
             var metricsModel = _mapper.Map<MetricsModel>(metricsDto);

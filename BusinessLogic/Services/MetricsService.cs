@@ -1,13 +1,9 @@
 ﻿using BusinessLogic.DTOs;
 using BusinessLogic.Interfaces;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace BusinessLogic.Services
 {
-    //Service, which works with metrics. Works with cyrillic and latin
-    /*So, if you want to add a new metric, just create a private method and describe the logic in it,
-    and then just set the property of metricsDto to the result of the method*/
+    //Service, which works with metrics
     /*ещё добавлю, что возможно в задании имелось ввиду что надо создать на фронте набор метрик,
     и юзер сам ставил галочки какие метрики ему нужны, и если так то можно просто скопипастить GetMetrixOfText и просто передавать туда
     bool для каждой метрики. Но возможно не это имелось ввиду в задании поэтому я сделал просто так. Ещё добавлю, что у меня
