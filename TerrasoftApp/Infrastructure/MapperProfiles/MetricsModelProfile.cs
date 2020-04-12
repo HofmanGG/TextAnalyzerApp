@@ -8,7 +8,7 @@ namespace TextAnalyzerApp.Infrastructure.MapperProfiles
     {
         public MetricsModelProfile()
         {
-            CreateMap<MetricsDto, MetricsModel>();
+            CreateMap<TextMetricsDto, TextMetricsModel>();
         }
     }
 }

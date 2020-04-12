@@ -10,17 +10,17 @@ namespace BusinessLogic.Services
     есть проект на Github https://github.com/HofmanGG/RepairService сайт ремонта техники, можете также посмотреть и его.*/
     /*и ещё, само собой я мог написать бомбезные юнит тесты xUnit/NUnit + Moq + AutoFixture + FluentAsssetions, сделать лучше фронт,
     сделать больше метрик, но сколько надо делать метрик и их сложность в задании не указано, поэтому я просто сделал то, что от меня хотели в задании.*/
-    public class MetricsService : IMetricsService
+    public class TextMetricsService : ITextMetricsService
     {
         private readonly ITextService _textService;
-        public MetricsService(ITextService textService)
+        public TextMetricsService(ITextService textService)
         {
             _textService = textService;
         }            
 
-        public MetricsDto GetAllMetricsOfText(string textToAnalize)
+        public TextMetricsDto GetAllMetricsOfText(string textToAnalize)
         {
-            var metrics = new MetricsDto();
+            var metrics = new TextMetricsDto();
 
             metrics.MostPopularChar = _textService.GetTheMostPopularChar(textToAnalize);
             metrics.LeastPopularChar = _textService.GetTheLeastPopularChar(textToAnalize);

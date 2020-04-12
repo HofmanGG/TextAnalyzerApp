@@ -26,7 +26,7 @@ namespace TerrasoftApp
 
             /*actually its better to write my custom dependencies in a separate file,
             but i think its overkill in this case*/
-            services.AddScoped<IMetricsService, MetricsService>();
+            services.AddScoped<ITextMetricsService, TextMetricsService>();
             services.AddScoped<ITextService, TextService>();
 
             services.AddAutoMapper(typeof(MetricsModelProfile));

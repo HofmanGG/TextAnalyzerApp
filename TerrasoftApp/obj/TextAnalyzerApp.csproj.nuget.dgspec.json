@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj": {}
+    "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj": {
+    "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj",
+        "projectPath": "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\Hofman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\BusinessLogic\\obj\\",
+        "outputPath": "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj": {
+    "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj",
+        "projectUniqueName": "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj",
         "projectName": "TextAnalyzerApp",
-        "projectPath": "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj",
+        "projectPath": "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\TerrasoftApp\\TextAnalyzerApp.csproj",
         "packagesPath": "C:\\Users\\Hofman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\TerrasoftApp\\obj\\",
+        "outputPath": "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\TerrasoftApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -88,8 +88,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\Hofman\\source\\repos\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj"
+              "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\Hofman\\Desktop\\terrasoft\\TextAnalyzerApp\\BusinessLogic\\BusinessLogic.csproj"
               }
             }
           }

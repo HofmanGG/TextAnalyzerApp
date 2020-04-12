@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace BusinessLogic.Services
 {
-    public interface IMetricsService
+    public interface ITextMetricsService
     {
-        MetricsDto GetAllMetricsOfText(string textToAnalize);
+        TextMetricsDto GetAllMetricsOfText(string textToAnalize);
     }
 }

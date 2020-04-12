@@ -10,7 +10,7 @@ namespace BusinessLogic.Services
     //Service, that works with text. Works with cyrillic and latin
     public class TextService: ITextService
     {
-        private char[] charsToNotInclude = { ' ' };
+        private readonly char[] charsToNotInclude = { ' ' };
 
         //return only one most popular char
         //chars that are upper case and lower case are different
