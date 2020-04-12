@@ -1,0 +1,30 @@
+<!--this program uses rxjs, so any time a user clicks on the send button, page will be refreshed-->
+<div class="col-md-6 offset-md-3">
+    <div class="padding">
+    <h2>Text Analyzer</h2>
+    <form [formGroup]="textForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="textToAnalyze">Write your text here...</label>
+            <input type="text" formControlName="textToAnalyze" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.textToAnalyze.errors }" />
+            <div *ngIf="submitted && f.textToAnalyze.errors" class="invalid-feedback">
+                <div *ngIf="f.textToAnalyze.errors.required">Text is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Send
+            </button>
+        </div>
+    </form>
+    </div>
+    <div *ngIf="metrics$ | async; let metrics; ">
+        <div class="padding">
+            <h2>Metrics of your text</h2>
+            <p><span class="font-weight-bold">Most Popular Char:</span> {{metrics.mostPopularChar}}</p>
+            <p><span class="font-weight-bold">Least Popular Char:</span> {{metrics.leastPopularChar}}</p>
+            <p><span class="font-weight-bold">Count of Upper Case Chars:</span> {{metrics.countOfUpperCaseChars}}</p>
+            <p><span class="font-weight-bold">Count of Sentences:</span> {{metrics.countOfSentences}}</p>
+        </div>
+    </div>
+</div>
